@@ -90,3 +90,51 @@
 // for(let propertyName in shopingCart){
 
 // }
+// console.log('This is Working')
+
+const color = '';
+if(color === 'green'){
+    console.log('You are a green friend');
+}
+if(color === 'red'){
+    console.log('You are a red friend');
+}
+if(color === 'blue'){
+    console.log('You are a blue friend');
+}
+if(color === 'orange'){
+    console.log('You are a orange friend');
+}
+if(color === 'yellow'){
+    console.log('You Are a yellow friend');
+}
+else {
+
+    console.log('You are my black black black friend');
+}
+
+//switch
+
+switch(color){
+    case 'green':
+    console.log('You are a green friend');
+    break;
+    //<<<blue>>>
+    case 'blue':
+        console.log('You are a blue friend');
+        break;
+         //<<<white>>>
+    case 'white':
+        console.log('You are a white friend');
+        break;
+         //<<<red>>>
+    case 'red':
+        console.log('You are a red friend');
+        break;
+         //<<<yellow>>>
+    case 'yellow':
+        console.log('You are a himu friend');
+        break;
+    default: 
+        console.log('You are a kalala friend');
+}
