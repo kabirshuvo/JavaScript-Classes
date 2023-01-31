@@ -24,7 +24,8 @@ function getOdds(numbers){
 }
 
 const myNumbers = [12, 65, 45, 78, 32, 85, 91];
+const total = getSum(myNumbers);
 const oddNumbers = getOdds(myNumbers);
 const oddSum = getSum(oddNumbers);
 
-console.log(oddSum);
+console.log(total);
