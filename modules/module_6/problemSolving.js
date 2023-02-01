@@ -39,3 +39,27 @@
 
 // const newLyric = lines.join('-');
 // console.log(newLyric);
+
+
+// * 22-6 Can You find out who will get the delicious cake? 
+
+//Find the max number
+
+const jim = 84;
+const dela = 99;
+const chinku = 77;
+
+/**
+ * if(jim > dela && jim > chinku){
+    console.log('jim Will get the cake')
+}
+
+else if(dela > jim && dela > chinku){
+    console.log('Dela Will eat the Delicious cake');
+}
+else {
+    console.log('Chinku will get the cake');
+}
+ */
+
+Math.max(12,34,99,55,48);

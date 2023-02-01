@@ -6,13 +6,20 @@ const result = Math.pow(4, 4);
 
 // const gap = Math.abs(num1 - num2);
 
-// if(gap < 5){
+ if(gap < 5){
 //     console.log('You are Good');
-// }
+ }
 
-// else{
+ else{
 //     console.log('stay Apart')
-// }
+ }
 
 // * Search Math MDN and read every day
 
+/**
+ * Math.abs(x);
+ * Math.ceil(x);
+ * math.flore(x);
+ * Math.round(x);
+ * Math.random()*100;
+ */
