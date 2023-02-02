@@ -6,13 +6,13 @@ const result = Math.pow(4, 4);
 
 // const gap = Math.abs(num1 - num2);
 
- if(gap < 5){
+ //if(gap < 5){
 //     console.log('You are Good');
- }
+ //}
 
- else{
+ //else{
 //     console.log('stay Apart')
- }
+ //}
 
 // * Search Math MDN and read every day
 
@@ -23,3 +23,8 @@ const result = Math.pow(4, 4);
  * Math.round(x);
  * Math.random()*100;
  */
+function add(a, b){
+    return a + b;
+  }
+  console.log(add("adam" + "eve"))
+  
