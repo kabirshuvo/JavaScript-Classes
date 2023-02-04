@@ -56,20 +56,49 @@
 // const freshList = removeDuplicate(names)
 // console.log(freshList);
 
-const numbers = [10,10, 20, 70, 20, 30, 60, 30, 40, 20, 40, 50,50, 60,30, 60, 70, 10, 70, 70, 20, 70, 80, 50, 80, 90, 90, 100, 100, 100]
+// const numbers = [10,10, 20, 70, 20, 30, 60, 30, 40, 20, 40, 50,50, 60,30, 60, 70, 10, 70, 70, 20, 70, 80, 50, 80, 90, 90, 100, 100, 100]
 
-function removeDuplicate(numbers){
-    let fresh =[];
-        for(let i=0; i < numbers.length; i++){
-            const number = numbers[i];
-            if(fresh.includes(number) === false){
-                fresh.push(number);
-            }
-        }
-        return fresh;
+// function removeDuplicate(numbers){
+//     let fresh =[];
+//         for(let i=0; i < numbers.length; i++){
+//             const number = numbers[i];
+//             if(fresh.includes(number) === false){
+//                 fresh.push(number);
+//             }
+//         }
+//         return fresh;
+// }
+
+// const freshList = removeDuplicate(numbers);
+// freshList.sort(function(a,b){return a-b});
+
+// console.log(freshList);
+
+//*****23.4  (removeDuplicate)*/
+
+/**
+ * * 1. show output  from: 1 -50;
+ * * 2. if number divisible by 3 number replaced by 'foo';
+ * * 3. if the number is divisibled by 5 than the number will replaced by 'bar';
+ * * 4. and last of all 
+ *  * if the number divisibled by both 3 && 5, then it will replace the number into 'foo-bar';
+ * 
+ */
+
+
+
+for(let i =1; i <= 50; i++) {
+    if (i % 3 ===0 && i % 5 ===0){
+        console.log('foo-bar');
+    
+    }
+    else if(i % 5 == 0){
+        console.log('bar');
+    }
+    else if(i % 3 === 0){
+        console.log('foo')
+    }
+    else{
+        console.log(i);
+    }
 }
-
-const freshList = removeDuplicate(numbers);
-freshList.sort(function(a,b){return a-b});
-
-console.log(freshList);
