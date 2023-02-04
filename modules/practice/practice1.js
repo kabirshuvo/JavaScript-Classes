@@ -38,20 +38,38 @@
 
 //*****23.3  (removeDuplicate)*/
 
-const names = ['babu', 'tabu', 'khabu','labu','chabu','Babu','Babu','tabu','khabu','labu','pabu','nabu','Babu','babu','jabu','rabu','oabu','mabu','nabu','banabu','Babu',];
+// const names = ['babu', 'tabu', 'khabu','labu','chabu','Babu','Babu','tabu','khabu','labu','pabu','nabu','Babu','babu','jabu','rabu','oabu','mabu','nabu','banabu','Babu',];
 
-function removeDuplicate(names){
-    const fresh =[];
-    for(let i =0; i< names.length; i++){
-        const name = names[i];
-        if(fresh.includes(name) === false){
-            fresh.push(name);
+// function removeDuplicate(names){
+//     const fresh =[];
+//     for(let i =0; i< names.length; i++){
+//         const name = names[i];
+//         if(fresh.includes(name) === false){
+//             fresh.push(name);
+//         }
+
+//     }
+//     return fresh;
+
+// }
+
+// const freshList = removeDuplicate(names)
+// console.log(freshList);
+
+const numbers = [10,10, 20, 70, 20, 30, 60, 30, 40, 20, 40, 50,50, 60,30, 60, 70, 10, 70, 70, 20, 70, 80, 50, 80, 90, 90, 100, 100, 100]
+
+function removeDuplicate(numbers){
+    let fresh =[];
+        for(let i=0; i < numbers.length; i++){
+            const number = numbers[i];
+            if(fresh.includes(number) === false){
+                fresh.push(number);
+            }
         }
-
-    }
-    return fresh;
-
+        return fresh;
 }
 
-const freshList = removeDuplicate(names)
+const freshList = removeDuplicate(numbers);
+freshList.sort(function(a,b){return a-b});
+
 console.log(freshList);
