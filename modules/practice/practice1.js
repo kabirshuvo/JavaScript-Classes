@@ -87,18 +87,34 @@
 
 
 
-for(let i =1; i <= 50; i++) {
-    if (i % 3 ===0 && i % 5 ===0){
-        console.log('foo-bar');
+// for(let i =1; i <= 50; i++) {
+//     if (i % 3 ===0 && i % 5 ===0){
+//         console.log('foo-bar');
     
-    }
-    else if(i % 5 == 0){
-        console.log('bar');
-    }
-    else if(i % 3 === 0){
-        console.log('foo')
-    }
-    else{
-        console.log(i);
-    }
-}
+//     }
+//     else if(i % 5 == 0){
+//         console.log('bar');
+//     }
+//     else if(i % 3 === 0){
+//         console.log('foo')
+//     }
+//     else{
+//         console.log(i);
+//     }
+// }
+
+/**
+ * * woodCalculator();
+ * 
+ * * fixed: per item wood requirements...
+ * 
+ *      1. chair --> 3cft;
+ *      2. table --> 7cft;
+ *      3. bed   --> 30cft;
+ * 
+ * * vary: quantity...
+ * *
+ * *
+ * *
+ */
+
