@@ -24,14 +24,34 @@
 
 // console.log(allFriends);
 
-//*****23.2  (Slice && spice)*/
+//*****23.2  (Slice && splice)*/
 
-const numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ];
+// const numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ];
 
-const targetedNumbers = numbers.slice(4, 7);
-console.log(targetedNumbers);
-console.log(numbers);
+// const targetedNumbers = numbers.slice(4, 7);
+// console.log(targetedNumbers);
+// console.log(numbers);
 
-const deleteAndAddNumbers = numbers.splice(0, 1, 00, 10);
-console.log(deleteAndAddNumbers);
-console.log(numbers);
+// const deleteAndAddNumbers = numbers.splice(0, 1, 00, 10);
+// console.log(deleteAndAddNumbers);
+// console.log(numbers);
+
+//*****23.3  (removeDuplicate)*/
+
+const names = ['babu', 'tabu', 'khabu','labu','chabu','Babu','Babu','tabu','khabu','labu','pabu','nabu','Babu','babu','jabu','rabu','oabu','mabu','nabu','banabu','Babu',];
+
+function removeDuplicate(names){
+    const fresh =[];
+    for(let i =0; i< names.length; i++){
+        const name = names[i];
+        if(fresh.includes(name) === false){
+            fresh.push(name);
+        }
+
+    }
+    return fresh;
+
+}
+
+const freshList = removeDuplicate(names)
+console.log(freshList);
