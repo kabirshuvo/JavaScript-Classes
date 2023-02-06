@@ -59,7 +59,26 @@ const result3 = isLGSeven(15);
 // ************************************
 
 
+function findingBadData(array){
+        let badDataCount = 0;
+        for (let i = 0; i < array.length; i++) {
+        if (array[i] < 0) {
+            badDataCount++;
+    }
+  }
+  return badDataCount;    
+}
 
+const result4 = findingBadData();
+
+
+// ************************************
+// ***(Problem 5: Convert your gems into diamond)***
+// ************************************
+
+function gemsToDiamond(){
+    
+}
 
 // *** Practice *** 
 
