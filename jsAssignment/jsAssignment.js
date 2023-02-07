@@ -139,13 +139,13 @@ const result4 = findingBadData();
  * if the given input is valid than this function will count three persons gem, and it will return the converted diamond count.
  */
 function gemsToDiamond(a, b, c){
-  if (typeof a !== 'number' && typeof b !== 'number' && typeof c !== 'number') {
+  if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
     return 'Please input numbers like this (10, 20, 30)';
   }
-  let first = a * 21;
-  let second = b * 32;
-  let third = c * 43;
-  let totalDiamond = first + second + third;
+  let firstGemCount = a * 21;
+  let secondGemCount = b * 32;
+  let thirdGemCount = c * 43;
+  let totalDiamond = firstGemCount + secondGemCount + thirdGemCount;
   if (totalDiamond < 2000) {
     return totalDiamond;
   } else {
@@ -154,7 +154,7 @@ function gemsToDiamond(a, b, c){
   }
 }
 
-const result5 = gemsToDiamond(100, 5, 1);
+const result5 = gemsToDiamond();
 
 
 // //* problem - 5 solved.
