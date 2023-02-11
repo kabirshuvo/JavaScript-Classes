@@ -6,11 +6,16 @@ document.getElementById('div-grettings').style.backgroundColor = 'green';
 const pHeadings = document.getElementsByClassName('p-headings');
 // console.log(pHeadings);
 for(const pheading of pHeadings){
-    // console.log(pheading.innerText);
+    console.log(pheading);
 }
 const firstLi = document.querySelector('nav li');
-console.log(firstLi);
+// console.log(firstLi);
 
 const navLi = document.querySelectorAll('nav li');
-console.log(navLi);
+// console.log(navLi);
 
+const sections = document.querySelectorAll('section')
+for(const section of sections){
+    section.style.border = '10px solid black';
+    section.style.borderRadius = '16px';
+}
