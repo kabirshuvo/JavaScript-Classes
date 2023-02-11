@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank inside</title>
+    <!-- Tailwind cli -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="pb-16 pt-16">
+      <h1 class="text-5xl text-center">
+        Funny <span class="font-bold text-indigo-500"> Munny</span>
+      </h1>
+    </header>
+    <main>
+      <!-- Output Section -->
+      <section>
+        <div
+          class="grid grid-cols-3 gap-4 py-4 w-9/12 mx-auto text-white text-center"
+        >
+          <div
+            class="bg-gradient-to-r from-violet-500 to-indigo-500 rounded p-8"
+          >
+            <h4 class="text-2xl p-2">Deposit</h4>
+            <h2 class="text-4xl p-2">$00</h2>
+          </div>
+          <div
+            class="bg-gradient-to-r from-indigo-500 to-purple-500 rounded p-8"
+          >
+            <h4 class="text-2xl p-2">Withdraw</h4>
+            <h2 class="text-4xl p-2">$00</h2>
+          </div>
+          <div
+            class="bg-gradient-to-r from-purple-500 to-violet-500 rounded p-8"
+          >
+            <h4 class="text-2xl p-2">Balance</h4>
+            <h2 class="text-4xl p-2">$1600</h2>
+          </div>
+        </div>
+      </section>
+      <!-- input Section -->
+      <section>
+        <div class="grid grid-cols-2 gap-4 py-16 w-9/12 mx-auto text-white">
+          <div
+            class="p-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded"
+          >
+            <h3 class="text-3xl p-4">Deposit More Save More</h3>
+            <input
+              class="w-9/12 block mb-2 px-3 rounded"
+              type="email"
+              id="user-email"
+              name="email
+              "
+              placeholder="Please Enter Ammount in Number"
+            />
+
+            <button
+              id="login-submit-btn"
+              class="transition duration-500 ease-in-out bg-gradient-to-t from-sky-700 to-indigo-700 hover:to-purple-500 py-2 px-4 rounded"
+            >
+              Deposit
+            </button>
+          </div>
+          <div
+            class="px-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded"
+          >
+            <h3 class="text-3xl p-4">Withdraw in Emmergency</h3>
+            <input
+              class="w-9/12 block mb-2 px-3 rounded"
+              type="email"
+              id="user-email"
+              name="email
+              "
+              placeholder="Please Enter Ammount in Number"
+            />
+
+            <button
+              id="login-submit-btn"
+              class="transition duration-500 ease-in-out bg-gradient-to-t from-sky-700 to-indigo-700 hover:to-purple-500 py-2 px-4 rounded"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./bankInside.js"></script>
+  </body>
+</html>

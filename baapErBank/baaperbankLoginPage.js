@@ -14,10 +14,10 @@ document.getElementById('login-submit-btn').addEventListener('click', function()
 
     //* step-4 varify email password and user validation
     if(email === 'kabirshuvo19@gmail.com' && password === 'Xadu.life'){
-        console.log('valid user');
+        window.location.href = 'bankInside.html';
     }
     else{
-        console.log('invalid user');
+        alert('Tui PasaVule Gesosh');
     }
 
 });
