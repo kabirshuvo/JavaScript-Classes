@@ -2,13 +2,34 @@ document.body.style.backgroundColor ='#333'
 //Deposit Section
 document.getElementById('deposit-btn').addEventListener('click', function(){
     const dipositField = document.getElementById('please-deposite');
-    const dipositAmmount = dipositField.value;
-    console.log(dipositAmmount);
+    const newDipositAmmountString = dipositField.value;
+    const newDipositAmmount = parseFloat(newDipositAmmountString);
+    
+   
 // Here I got the diposit ammount 
     const depositTotalElement = document.getElementById('total-diposit');
-    const depositTotal = depositTotalElement.innerText;
-    console.log(depositTotal);
-    depositTotalElement.innerText = dipositAmmount;
+    const previousDepositTotalString = depositTotalElement.innerText;
+    const previousDepositTotal = parseFloat(previousDepositTotalString);
+
+  // here is the inTotalDeposite  
+    const inTotalDeposit = previousDepositTotal + newDipositAmmount; 
+
+    depositTotalElement.innerText = inTotalDeposit;
+
+    // adding inTotal Deposit with balance
+    const currentBalance = document.getElementById('balance');
+    const previousBalanceString = currentBalance.innerText;
+    const previousBalance = parseFloat(previousBalanceString) ;
+
+    const newTotalBalance = newDipositAmmount + previousBalance;
+
+    currentBalance.innerText = newTotalBalance;
+
+    console.log(newTotalBalance);
+// Adding 
+
+//* Clear the deposit field
+dipositField.value = '';
 });
 
 
@@ -17,11 +38,29 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
 
 document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawField = document.getElementById('emmergency-money');
-    const withdrawAmmount = withdrawField.value;
-    console.log(withdrawAmmount);
+    const newWithdrawAmmountString = withdrawField.value;
+    const newWithdrawAmmount = parseFloat(newWithdrawAmmountString);
+   
     // Here I got the withdray ammount
     const withdrawTotalElement = document.getElementById('total-withdraw');
-    const withdrawTotal = withdrawTotalElement.innerText;
-    withdrawTotalElement.innerText = withdrawAmmount;
-    console.log(withdrawTotal);
+    const previousWithdrawTotalString = withdrawTotalElement.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
+
+    const inTotalWithdraw = newWithdrawAmmount + previousWithdrawTotal; 
+
+    withdrawTotalElement.innerText = inTotalWithdraw;
+
+// minus withdray from balance 
+const currentBalance = document.getElementById('balance');
+const previousBalanceString = currentBalance.innerText;
+const previousBalance = parseFloat(previousBalanceString) ;
+
+const newTotalBalance = previousBalance - newWithdrawAmmount;
+
+currentBalance.innerText = newTotalBalance;
+
+    console.log(newTotalBalance);
+
+    //* clear the withdraw field
+    withdrawField.value = '';
 });
