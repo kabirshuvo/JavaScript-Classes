@@ -16,6 +16,14 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const inTotalDeposit = previousDepositAmmount + newDipositAmmount;
     previousDepositElement.innerText = inTotalDeposit;
     
+    // got the in total deposit
+    const previousBalanceElement = document.getElementById('Balance-total');
+    const previousBalanceAmmountString = previousBalanceElement.innerText;
+    const previousBalanceAmmount = parseFloat(previousBalanceAmmountString);
+    // got the previous balance
+
+    const newTotalBalance = previousBalanceAmmount + newDipositAmmount;
+    previousBalanceElement.innerText = newTotalBalance;
     console.log(inTotalDeposit);
 });
 
@@ -33,6 +41,20 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     withdrawField.value = '';
     // I got the new withdraw Ammount;
 
+    const previousWithdrawElement = document.getElementById('withdraw-total');
+    const previousWithdrawAmmountString = previousWithdrawElement.innerText;
+    const previousWithdrawAmmount = parseFloat(previousWithdrawAmmountString);
+    // got the previous Withdraw Ammount
 
+    const inTotalWithdraw = previousWithdrawAmmount + newWithdrawAmmount;
+    previousWithdrawElement.innerText = inTotalWithdraw;
+
+    const previousBalanceElement = document.getElementById('Balance-total');
+    const previousBalanceAmmountString = previousBalanceElement.innerText;
+    const previousBalanceAmmount = parseFloat(previousBalanceAmmountString);
+    // got the previous Balance 
+    const newTotalBalance = previousBalanceAmmount - newWithdrawAmmount;
+
+    previousBalanceElement.innerText = newTotalBalance;
 
 });
