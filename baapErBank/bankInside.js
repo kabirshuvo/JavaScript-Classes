@@ -40,20 +40,36 @@ document.getElementById('withdraw-btn').addEventListener('click', function(){
     const withdrawField = document.getElementById('emmergency-money');
     const newWithdrawAmmountString = withdrawField.value;
     const newWithdrawAmmount = parseFloat(newWithdrawAmmountString);
+    //* clear the withdraw field
+ withdrawField.value = '';
+
+    if(isNaN(newWithdrawAmmount)){
+        alert('please provide a valid ammount');
+        return;
+    }
    
     // Here I got the withdray ammount
     const withdrawTotalElement = document.getElementById('total-withdraw');
     const previousWithdrawTotalString = withdrawTotalElement.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
 
-    const inTotalWithdraw = newWithdrawAmmount + previousWithdrawTotal; 
-
-    withdrawTotalElement.innerText = inTotalWithdraw;
+   
 
 // minus withdray from balance 
 const currentBalance = document.getElementById('balance');
 const previousBalanceString = currentBalance.innerText;
 const previousBalance = parseFloat(previousBalanceString) ;
+
+ 
+
+if(newWithdrawAmmount > previousBalance){
+    alert('Not Enough Munnny');
+    return;
+}
+    
+const inTotalWithdraw = newWithdrawAmmount + previousWithdrawTotal; 
+
+withdrawTotalElement.innerText = inTotalWithdraw;
 
 const newTotalBalance = previousBalance - newWithdrawAmmount;
 
@@ -61,6 +77,5 @@ currentBalance.innerText = newTotalBalance;
 
     console.log(newTotalBalance);
 
-    //* clear the withdraw field
-    withdrawField.value = '';
+   
 });
