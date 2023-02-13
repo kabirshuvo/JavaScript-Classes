@@ -1,11 +1,18 @@
 
 document.getElementById('deposit-btn').addEventListener('click', function(){
-const newDeposit = getInputValueById('new-deposit');
-const previousDeposit = getElementValueById('deposit-total');
+const newDeposit = inputValue('new-deposit');
+const previousDeposit = elementValue('deposit-total');
 const totalDeposit = previousDeposit + newDeposit;
-setelEmentValue('deposit-total', totalDeposit);
-const previousBalance = getElementValueById('Balance-total');
+if(isNaN(newDeposit)){
+    alert('provide valid number')
+    return;
+}
+setElementValue('deposit-total', totalDeposit);
+const previousBalance = elementValue('Balance-total');
 const newBalance = previousBalance + newDeposit;
-setelEmentValue('Balance-total', newBalance);
+
+
+
+setElementValue('Balance-total', newBalance);
 
 });
