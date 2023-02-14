@@ -15,13 +15,23 @@ function updateInputNumber(isIncrease){
 
 
     inputNumberField.value = newInputNumber;
+
+    return newInputNumber;
 }
 
+function updateOutputValue(newInputNumber){
+    const inputNumbersPrice = newInputNumber * 59;
+    const outputNumberPrice = document.getElementById('single-casing-price');
+    outputNumberPrice.innerText = inputNumbersPrice;
+}
 
 document.getElementById('casing-plus-btn').addEventListener('click', function(){
-    updateInputNumber(true);
+   const newInputNumber = updateInputNumber(true);
+
+   updateOutputValue(newInputNumber);
 });
 
 document.getElementById('casing-minus-btn').addEventListener('click', function(){
-    updateInputNumber(false);
+    const newInputNumber = updateInputNumber(false);
+    updateOutputValue(newInputNumber);
 });
