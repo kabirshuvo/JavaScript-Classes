@@ -9,7 +9,7 @@ if(isNaN(withdraw)){
     alert('Please Input a Valid Number');
     return;
 }
-if(withdraw > currentBalance){
+if(withdraw > balance){
     alert('not Enough Fund');
     return;
 }
