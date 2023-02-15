@@ -46,3 +46,30 @@ document.getElementById('calculator').addEventListener('click', function(event){
        
     }
 })
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+    const displayPinField = document.getElementById('display-pin');
+    const currentPin = displayPinField.value;
+
+    const typedNumberField = document.getElementById('typed-numbers');
+    const typedNumber = typedNumberField.value;
+
+    const pinSuccessMessage = document.getElementById('pin-success');
+    const pinFailorMessage = document.getElementById('pin-failure');
+
+    if(typedNumber === currentPin){
+        
+        pinSuccessMessage.style.display ='block';
+        pinFailorMessage.style.display ='none';
+    }
+    else{
+        
+        pinFailorMessage.style.display ='block';
+        pinSuccessMessage.style.display ='none';
+    }
+
+})
+
+const category="pen"; 
+const performer = category+"-teller";
+console.log(performer);
