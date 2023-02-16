@@ -28,13 +28,13 @@
             <div>
               <div>
                 <h3 class="text-2xl py-2">Incoming</h3>
-                <input id="incoming" class="rounded" type="number" />
+                <input id="incoming-input" class="rounded" type="number" />
               </div>
               <div>
                 <h2 class="text-2xl py-2 mt-8">Outgoing</h2>
                 <div class="flex gap-2 py-2 px-8">
                   <h3>Food:</h3>
-                  <input id="outgoing" class="w-1/4 rounded" type="number" />
+                  <input id="food" class="w-1/4 rounded" type="number" />
                 </div>
                 <div class="flex gap-2 py-2 px-8">
                   <h3>Rent:</h3>
@@ -52,8 +52,8 @@
                 </button>
               </div>
               <div>
-                <h2 class="my-2 text-2xl">Total Expenses: <span>00</span></h2>
-                <h2 class="my-2 text-2xl mb-8">Balance: <span>00</span></h2>
+                <h2 class="my-2 text-2xl">Total Expenses: <span id="total-expence">00</span></h2>
+                <h2 class="my-2 text-2xl mb-8">Balance: <span id="rest-balance">00</span></h2>
                 <div class="flex gap-4">
                   <h4>Save:</h4>
                   <input class="w-1/4 rounded" type="number" />
