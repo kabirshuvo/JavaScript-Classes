@@ -52,21 +52,28 @@
                 </button>
               </div>
               <div>
-                <h2 class="my-2 text-2xl">Total Expenses: <span id="total-expence">00</span></h2>
-                <h2 class="my-2 text-2xl mb-8">Balance: <span id="rest-balance">00</span></h2>
+                <h2 class="my-2 text-2xl">
+                  Total Expenses: <span id="total-expence">00</span>
+                </h2>
+                <h2 class="my-2 text-2xl mb-8">
+                  Balance: <span id="rest-balance">00</span>
+                </h2>
                 <div class="flex gap-4">
                   <h4>Save:</h4>
-                  <input class="w-1/4 rounded" type="number" />
+                  <input id="save-input" class="w-1/4 rounded" type="number" />
                   <h4>%</h4>
-                  <button class="px-4 bg-indigo-500 rounded hover:bg-amber-500">
+                  <button
+                    id="save-btn"
+                    class="px-4 bg-indigo-500 rounded hover:bg-amber-500"
+                  >
                     Save
                   </button>
                 </div>
                 <h3 class="text-2xl py-2 mt-8">
-                  Saving Amount: <span>00</span>
+                  Savings Ammount: <span id="savings-ammount">00</span>
                 </h3>
                 <h2 class="text-2xl py-2">
-                  Remaining Balance: <span>00</span>
+                  Remaining Balance: <span id="balance-remaining">00</span>
                 </h2>
               </div>
             </div>
