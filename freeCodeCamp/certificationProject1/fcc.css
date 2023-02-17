@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 :root {
-  --color-white: #ffa287;
-  --color-darkblue: #716a7b;
-  --color-darkblue-alpha: #a27a94;
-  --color-green: #d98997;
+  --color-white: #fefedf;
+  --color-darkash: #716a7b;
+  --color-purple: #bf94ff;
+  --color-green: #00c9a5;
 }
 
 *,
@@ -31,7 +31,7 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: var(--color-darkblue);
+  background: var(--color-darkash);
   background-image: linear-gradient(
       115deg,
       rgba(58, 58, 158, 0.8),
@@ -108,7 +108,7 @@ button {
 /* form styles >>> */
 
 form {
-  background: var(--color-darkblue-alpha);
+  background: var(--color-purple);
   padding: 2.5rem 0.625rem;
   border-radius: 0.25rem;
 }

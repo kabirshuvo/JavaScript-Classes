@@ -6,11 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discount-1</title>
   </head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
   <body>
     <h1>Get Your Discount</h1>
+
     <div>
-      <input type="number" name="discount" id="discount" />
+      <h2>Total Price <span id="total-price">10000</span></h2>
+      <input id="discount" type="number" name="discount" />
       <button id="discount-btn">Apply</button>
+      <h2>
+        Payable Ammount <br />
+        <span id="payable-ammount">00</span>
+      </h2>
     </div>
+
+    <script src="./discount.js"></script>
   </body>
 </html>
