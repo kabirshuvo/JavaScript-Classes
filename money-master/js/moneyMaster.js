@@ -4,6 +4,13 @@ function getIncomingValue(inputID){
     const incomingInput = document.getElementById(inputID);
     const incomingString = incomingInput.value; 
     const incomingValue = parseFloat(incomingString);
+
+    if (incomingValue < 0 || isNaN(incomingValue)) {
+        alert("Please enter a valid incoming value");
+        incomingInput.value = '';
+        return 0;
+      }
+      
     incomingInput.value = '';
     return incomingValue;
 }

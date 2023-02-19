@@ -67,10 +67,7 @@ function getIncomingValue(inputID) {
     const savings = (restBalance * savingsInput) / 100;
   
     // Check if savings value is greater than remaining balance
-    if (savings > restBalance) {
-      alert("Savings cannot be greater than remaining balance");
-      return 0;
-    }
+       
     
     return savings;
   }

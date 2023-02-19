@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Blog</title>
+    <link rel="stylesheet" href="./styles/blog.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Short Questions and Answers</h1>
+      <button id="home-btn" onclick="homeFunction()">Home</button>
+    </header>
+    <main>
+      <section>
+        <h2>
+          <code>Question 1: What is DOM and what is the purpose of DOM?</code>
+        </h2>
+        <p><code>Answer 1...</code></p>
+        <div>
+          <p>The meaning of DOM = Document Object Model</p>
+          <p>
+            I can obviously say that DOM stands in the middle of Html and Java
+            Script. DOM helps Java Script to manupulate every element, style and
+            structure form html as an object, and also converts javaScript
+            objects in a reverse way.
+          </p>
+          <h3>Dom rerpensents the html document as a node or as an object</h3>
+        </div>
+      </section>
+      <section>
+        <h2>
+          <code
+            >Question 2: How will you select HTML elements using DOM? Name the
+            DOM methods.</code
+          >
+        </h2>
+        <p><code>Answer 2...</code></p>
+        <div>By using DOM I can sellect HTML elements in four way:</div>
+        <ul>
+          <li>document. <code>getElementById</code> ('elementId')</li>
+          <li>
+            document.
+            <code>getElementsByClassName</code> ('elements-class-name')
+          </li>
+          <li>
+            document.<code>getElementsByTagName</code> ('elements-tag-name')
+          </li>
+          <li>
+            document.
+            <code>querySelector and querySelectorAll </code
+            >('elements-class/id')
+          </li>
+        </ul>
+        <p>
+          <span>note:</span><code>querySelectorAll</code> sellects element from
+          the nodeList
+        </p>
+      </section>
+      <section>
+        <h2><code>Question 3: What is event bubble?</code></h2>
+        <p><code>Answer 3...</code></p>
+        <div>
+          <p>
+            In a simple way I can say that: <br />
+            if i click an html element, this click will effect not only the html
+            element but also all of its parrent elements.
+          </p>
+          <p>here is an example</p>
+          <img src="./images/JavaScript-event-bubbling.png" alt="" />
+          <p><sub>image source: internet.</sub></p>
+          <p>Than You so much for understanding event Bubbling</p>
+        </div>
+      </section>
+      <section>
+        <h2>
+          <code
+            >Question 4: What is a callback function and why will you use
+            it?</code
+          >
+        </h2>
+        <p><code>Answer 4...</code></p>
+        <p>A function which accepts another function as an argument</p>
+        <p>
+          In JavaScript, functions are objects. we Can pass objects to functions
+          as parameters also.
+        </p>
+        <h4>
+          I use callback function to reduce repetative code, to make my code
+          more cleaner and also to pass a function as an object or parameter to
+          another function.
+        </h4>
+      </section>
+    </main>
+    <footer>
+      <button id="footer-btn" class="footer-btn">Go Top</button>
+    </footer>
+    <script src="./jsFiles/blog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area Calculation</title>
+    <link rel="stylesheet" href="./styles/areaCalc.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div>
+          <h1>InterActive</h1>
+          <h3>Geometry Book</h3>
+        </div>
+        <div>
+          <button
+            id="blog-btn"
+            class="float-left blog-button"
+            onclick="blogFunction()"
+          >
+            Blog
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <div class="main-div">
+          <!-- Triangle -->
+          <section>
+            <div class="main-content" onmouseover="changeBackgroundColor(this)">
+              <div><img src="./images/triangle.png" alt="triangle" /></div>
+              <div><h2>Triangle</h2></div>
+              <p>Area (A) = 0.5 * b * h</p>
+              <div class="image-input">
+                <input
+                  id="triangle-a"
+                  class="image-input-fields"
+                  placeholder="b"
+                  type="text"
+                />
+                <p>cm</p>
+                <input
+                  id="triangle-b"
+                  class="image-input-fields"
+                  placeholder="h"
+                  type="text"
+                />
+                <p>cm</p>
+              </div>
+              <button id="triangle" class="section-btn">Calculate</button>
+            </div>
+          </section>
+          <!-- Rectangle -->
+          <section>
+            <div class="main-content" onmouseover="changeBackgroundColor(this)">
+              <div><img src="./images/rectangle.png" alt="rectangle" /></div>
+              <div><h2>Rectangle</h2></div>
+              <p>Area (A) = w * I</p>
+              <div class="image-input">
+                <input
+                  id="rectangle-a"
+                  class="image-input-fields"
+                  placeholder="w"
+                  type="text"
+                />
+                <p>cm</p>
+                <input
+                  id="rectangle-b"
+                  class="image-input-fields"
+                  placeholder="l"
+                  type="text"
+                />
+                <p>cm</p>
+              </div>
+              <button id="rectangle" class="section-btn">Calculate</button>
+            </div>
+          </section>
+          <!-- parallelogram -->
+          <section>
+            <div class="main-content" onmouseover="changeBackgroundColor(this)">
+              <div>
+                <img src="./images/parallelogram.png" alt="parallelogram" />
+              </div>
+              <div><h2>parallelogram</h2></div>
+              <p>Area (A) = b * h</p>
+              <div class="image-input">
+                <input
+                  id="parallelogram-a"
+                  class="image-input-fields"
+                  placeholder="b"
+                  type="text"
+                />
+                <p>cm</p>
+                <input
+                  id="parallelogram-b"
+                  class="image-input-fields"
+                  placeholder="h"
+                  type="text"
+                />
+                <p>cm</p>
+              </div>
+              <button id="parallelogram" class="section-btn">Calculate</button>
+            </div>
+          </section>
+          <!-- rhombus -->
+          <section>
+            <div class="main-content" onmouseover="changeBackgroundColor(this)">
+              <div><img src="./images/rhombus.png" alt="rhombus" /></div>
+              <h2>Rhombus</h2>
+              <p>Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
+              <div class="image-input">
+                <input id="rhombus-a" class="image-input-fields" type="text" />
+                <p>cm</p>
+                <input id="rhombus-b" class="image-input-fields" type="text" />
+                <p>cm</p>
+              </div>
+              <button id="rhombus" class="section-btn">Calculate</button>
+            </div>
+          </section>
+          <!-- pentagon -->
+          <section>
+            <div class="main-content" onmouseover="changeBackgroundColor(this)">
+              <div><img src="./images/pentagon.png" alt="pentagon" /></div>
+              <h2>pentagon</h2>
+              <p>Area (A) = 0.5 * p * b</p>
+              <div class="image-input">
+                <input id="pentagon-a" class="image-input-fields" type="text" />
+                <p>cm</p>
+                <input id="pentagon-b" class="image-input-fields" type="text" />
+                <p>cm</p>
+              </div>
+              <button id="pentagon" class="section-btn">Calculate</button>
+            </div>
+          </section>
+          <!-- ellipse -->
+          <section>
+            <div class="main-content" onmouseover="changeBackgroundColor(this)">
+              <div><img src="./images/ellipse.png" alt="ellipse" /></div>
+              <h2>Ellipse</h2>
+              <p>Area (A) = &pi; * ab</p>
+              <div class="image-input">
+                <input id="ellipse-a" class="image-input-fields" type="text" />
+                <p>cm</p>
+                <input id="ellipse-b" class="image-input-fields" type="text" />
+                <p>cm</p>
+              </div>
+              <button id="ellipse" class="section-btn">Calculate</button>
+            </div>
+          </section>
+        </div>
+      </main>
+      <aside>
+        <div>
+          <h2>Area Calculation</h2>
+
+          <!-- *result area  -->
+          <!-- triangle Output -->
+          <div class="result-area" id="triangle">
+            <p>1. Triangle: <span id="triangle-output"></span>cm</p>
+            <button class="convert-btns">Convert to m<sup>2</sup></button>
+          </div>
+
+          <!-- rectangle Output -->
+          <div class="result-area" id="rectangle">
+            <p>2. Rectangle: <span id="rectangle-output"></span>cm</p>
+            <button class="convert-btns">Convert to m<sup>2</sup></button>
+          </div>
+
+          <!-- p.gram Output -->
+          <div class="result-area" id="parallelogram">
+            <p>3. p.gram: <span id="parallelogram-output"></span>cm</p>
+            <button class="convert-btns">Convert to m<sup>2</sup></button>
+          </div>
+
+          <!-- Rhombus Output -->
+          <div class="result-area" id="rhombus">
+            <p>4. Rhombus: <span id="rhombus-output"></span>cm</p>
+            <button class="convert-btns">Convert to m<sup>2</sup></button>
+          </div>
+
+          <!-- pentagon Output -->
+          <div class="result-area" id="pentagon">
+            <p>5. pentagon: <span id="pentagon-output"></span>cm</p>
+            <button class="convert-btns">Convert to m<sup>2</sup></button>
+          </div>
+
+          <!-- Ellipse Output -->
+          <div class="result-area" id="ellipse">
+            <p>6. Ellipse: <span id="ellipse-output"></span>cm</p>
+            <button class="convert-btns">Convert to m<sup>2</sup></button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="./js/utility.js"></script>
+    <script src="./js/areaCalc.js"></script>
+  </body>
+</html>
