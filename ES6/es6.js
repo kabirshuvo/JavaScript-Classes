@@ -1,4 +1,4 @@
-// Fat Arrow function
+//* Fat Arrow function
 
 //* version 1
 // function number(){
@@ -15,4 +15,15 @@ let number = () => {
 let number1 = () => 10;
 
 
-console.log(number1());
+//********************* .this Keyword */
+
+let javascript ={
+    name: 'javaScript',
+    libraries: ['react', 'Angular', 'Vue'],
+    printLibraries: function(){
+        this.libraries.forEach((a) => console.log(`${this.name} loves ${a}`)
+        )
+    }
+}
+
+javascript.printLibraries();
