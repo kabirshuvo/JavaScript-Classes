@@ -3,16 +3,18 @@ const mealDbApi = (searchText) => {
     fetch(url)
     .then(res => res.json())
     .then(data => displayMeals(data.meals))
+    .catch((err) => {
+      console.log(err)
+  })
 }
 
 const displayMeals = meals => {
   //  console.log(meals);
-
     //*step:1
     const mealsContainer = document.getElementById('meals-container');
     mealsContainer.innerHTML = '';
-   meals.forEach(meal => {
-   // console.log(meal);
+    meals.forEach(meal => {
+    //console.log(meal);
     //*step2: create child for 
     const mealDiv = document.createElement('div');
     mealDiv.classList.add('col');
@@ -25,14 +27,22 @@ const displayMeals = meals => {
                 <h5 class="card-title">${meal.strMeal}</h5>
                 <p class="card-text">${meal.strInstructions}
                 </p>
+                <button
+                onclick="loadMealDetails2(${meal.idMeal})"
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#mealDetails"
+      >
+        Details
+      </button>
               </div>
-            </div>
+        </div>
     `;
     //*step4
     mealsContainer.appendChild(mealDiv);
-   });
+   })
 }
-
 
 const searchMeal = () =>{
     const searchText = document.getElementById('search-field').value;
@@ -40,9 +50,46 @@ const searchMeal = () =>{
 
     console.log(searchText);
     mealDbApi(searchText);
+}
+
+const loadMealDetails = idMeal => {
+  const URL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
+  console.log(URL)
+  fetch(URL)
+  .then(res => res.json())
+  .then(data => displayMealDetails(data.meals[0]))
+  .catch(err => {
+    console.log(err)
+  })
 
 }
 
+//* Async Await 
+
+const loadMealDetails2 = async(idMeal) =>{
+  const URL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
+
+  try{
+    const res = await fetch(URL);
+    const data = await res.json();
+    displayMealDetails(data.meals[0])
+    }
+  catch(error){
+    console.log(error);
+
+  }
+
+
+}
+
+
+const displayMealDetails = meal => {
+    document.getElementById('mealDetailsLabel').innerText = meal.strMeal;
+
+    const mealDetails = document.getElementById('mealDetailBody');
+    mealDetails.innerHTML = `
+    <img class="img-fluid" src="${meal.strMealThumb}" alt=""> 
+    
+    `
+}
 mealDbApi('rice');
-
-
