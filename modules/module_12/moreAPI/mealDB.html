@@ -15,10 +15,24 @@
   </head>
   <body>
     <main>
-      <section>
-        <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4">
-          
+      <!-- Search Container -->
+      <section
+        style="height: 100px"
+        class="d-flex align-items-center justify-content-center"
+        class="container"
+      >
+        <div id="search-container">
+          <input id="search-field" type="text" placeholder="search" />
+          <button onclick="searchMeal()" class="btn btn-primary">
+            Search Food
+          </button>
         </div>
+      </section>
+      <section>
+        <div
+          id="meals-container"
+          class="row row-cols-1 row-cols-md-3 g-4"
+        ></div>
       </section>
     </main>
 

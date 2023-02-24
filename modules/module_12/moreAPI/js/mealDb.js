@@ -1,16 +1,18 @@
-const mealDbApi = () => {
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+const mealDbApi = (searchText) => {
+    const url =`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
+    fetch(url)
     .then(res => res.json())
     .then(data => displayMeals(data.meals))
 }
 
 const displayMeals = meals => {
-    console.log(meals);
+  //  console.log(meals);
 
     //*step:1
     const mealsContainer = document.getElementById('meals-container');
+    mealsContainer.innerHTML = '';
    meals.forEach(meal => {
-    console.log(meal);
+   // console.log(meal);
     //*step2: create child for 
     const mealDiv = document.createElement('div');
     mealDiv.classList.add('col');
@@ -32,4 +34,15 @@ const displayMeals = meals => {
 }
 
 
-mealDbApi();
+const searchMeal = () =>{
+    const searchText = document.getElementById('search-field').value;
+    // search meals
+
+    console.log(searchText);
+    mealDbApi(searchText);
+
+}
+
+mealDbApi('rice');
+
+
