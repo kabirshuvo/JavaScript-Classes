@@ -46,9 +46,7 @@ const displayPhone = (phones, dataLimit) =>{
           Launch demo modal
         </button>
         </div>
-      </div>
-        
-      
+      </div>      
         `;
         phonesContainer.appendChild(phoneDiv);
     });

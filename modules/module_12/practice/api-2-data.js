@@ -1,4 +1,4 @@
-const data = [
+const cars = [
     {
       _id: "60795d4e0489a32f948c4167",
       name: "Honda Sedan",
@@ -32,3 +32,27 @@ const data = [
       
     },
   ];
+const displayCars = (cars) => {
+  const carContainer = document.getElementById('car-Container');
+  cars.forEach(car =>{
+const carDiv = document.createElement('div');
+      carDiv.classList.add('card-group', 'gap-5');
+      const imageUrl = car.imageURL ? car.imageURL : 'https://via.placeholder.com/150';
+      carDiv.innerHTML = `
+      <div class="card">
+      <img src="${imageUrl}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">${car.name}</h5>
+        <p class="card-text">${car.description}</p>
+      </div>
+      <div class="card-footer">
+        <button>Buy Now</button>
+      </div>
+    </div>
+      `;
+      carContainer.appendChild(carDiv);
+  } )
+}
+
+
+  displayCars(cars);
