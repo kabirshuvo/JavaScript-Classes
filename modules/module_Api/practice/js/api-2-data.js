@@ -37,18 +37,17 @@ const displayCars = (cars) => {
   cars.forEach(car =>{
 const carDiv = document.createElement('div');
       carDiv.classList.add('card-group', 'gap-5');
-      const imageUrl = car.imageURL ? car.imageURL : 'https://via.placeholder.com/150';
+      const imageUrl = car.imageURL ? car.imageURL : 'img Not Found';
       carDiv.innerHTML = `
       <div class="card">
-      <img src="${imageUrl}" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">${car.name}</h5>
-        <p class="card-text">${car.description}</p>
+        <img src="${imageUrl}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">${car.name}</h5>
+          <p class="card-text">
+            ${car.description}
+          </p>
+        </div>
       </div>
-      <div class="card-footer">
-        <button>Buy Now</button>
-      </div>
-    </div>
       `;
       carContainer.appendChild(carDiv);
   } )
