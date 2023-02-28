@@ -36,7 +36,7 @@ const cars = [
 ];
 const displayCars = (cars) => {
 const carContainer = document.getElementById('cars-container');
-cars = cars.slice(0, 2);
+cars = cars.slice(0, 3);
 cars.forEach(car =>{
 const carDiv = document.createElement('div');
     carDiv.classList.add('col');
