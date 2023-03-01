@@ -1,4 +1,4 @@
-const getData = async () => {
+const getDogs = async () => {
     //Random Dog Api
     const URL = `{"fileSizeBytes":3356271,"url":"https://random.dog/5d433414-7e79-4d14-9951-640cb7a85c3f.mp4"}`
 
@@ -16,13 +16,30 @@ const getData = async () => {
     }
 }
 
-const displayData = () => {
+const displayDogs = (dogs) => {
+
+    console.log(dogs);
+
     const dogsContainer = document.getElementById('dogs-container').addEventListener('click', function(){
+        dogs.forEach(dog =>{
+            
+        console.log(dog); 
+
+            const imgUrl = dogs.imgUrl ? dogs.imageurl: 'No img found'
+
         const displayDiv = document.createElement('div');
         displayDiv.classList.add('')
+        displayDiv.innerHTML = `
+        <img src="${imgUrl}">
+        `;
+        dogsContainer.appendChild(displayDiv);
+        
+        })
+
+        
     });
     
 
 }
 
-getData();
+getDogs();
