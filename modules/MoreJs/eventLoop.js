@@ -18,7 +18,6 @@ function c(){
 }
 function d(){
     console.log('d');
-    x()
     console.log('dd');
     
 }
@@ -40,5 +39,14 @@ function z(){
     
 }
 
+setInterval (() =>{
+    console.log('Asynchronized')
+}, 1000) 
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+
+
 a();
-//x();
+x();
