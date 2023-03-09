@@ -24,9 +24,9 @@ const getInfo = () => {
    const name = prompt('Would you like to tell me your name');
    console.log(name);
    if(name === null){
-    alert('নাম না দিলে হইবো না, দিতেই হবে')
+    alert('No Name No Game')
    }
    else{
-    alert('সু-স্বাগতম');
+    alert('Welcome', name,);
    }
 };
