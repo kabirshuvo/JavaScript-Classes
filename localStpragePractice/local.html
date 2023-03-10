@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     />
     <title>Local Storage</title>
+    <style>
+      body {
+        background-color: rebeccapurple;
+        color: whitesmoke;
+      }
+    </style>
   </head>
   <body class="container py-5">
     <header>
@@ -29,16 +35,28 @@
       <div class="py-2"></div>
 
       <div class="ps-1">
-        <button onclick="setItem()">Set</button>
-        <button onclick="getItem()">Get</button>
-        <button onclick="removeItem()">Remove</button>
-        <button onclick="clearItem()">Clear</button>
-        <button onclick="reload()">Reload</button>
+        <button onclick="setItem()" class="btn btn-outline-secondary">
+          Set
+        </button>
+        <button onclick="getItem()" class="btn btn-outline-secondary">
+          Get
+        </button>
+        <button onclick="removeItem()" class="btn btn-outline-secondary">
+          Remove
+        </button>
+        <button onclick="clearItem()" class="btn btn-outline-secondary">
+          Clear
+        </button>
+        <button onclick="reload()" class="btn btn-outline-secondary">
+          Reload
+        </button>
       </div>
     </section>
     <section>
       <div>
-        <p id="showItemUl"></p>
+        <p class="text-center py-5">
+          clickCount : = <span id="clickCount">0</span>
+        </p>
       </div>
     </section>
     <!-- *My Scripts* -->

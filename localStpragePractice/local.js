@@ -1,6 +1,8 @@
 console.log('Keep Practicing');
 
-
+const setItem = ()=>{
+    localStorage.setItem('name:', 'Xadu')
+}
 
 const reload =()=>{
     window.location.reload(true);
@@ -28,9 +30,6 @@ const name = {firseName: 'Abraham', lastName:'Linkon'}
 
 const personStringify = JSON.stringify(name);
 
-//const atLocal = localStorage.setItem(personStringify);
-localStorage.setItem('name',name);
 
-// const setItem = () => {
-//     localStorage.setItem('atLocal')
-// }
+localStorage.setItem('name', personStringify);
+
