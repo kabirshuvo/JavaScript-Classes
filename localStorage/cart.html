@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <h3>Shopping cart Saves Data at local storage</h3>
+
+    <input id="product-input-field" type="text" placeholder="Product" />
+    <input id="quantity-input-field" type="text" placeholder="Quantity" />
+    <br />
+
+    <button onclick="addProduct()">Add to Cart</button>
+
+    <div>
+      <ul id="cart-container"></ul>
+    </div>
+
+    <script src="./cart.js"></script>
+  </body>
+</html>
