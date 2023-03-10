@@ -26,10 +26,13 @@ const clearItem = () => {
     localStorage.clear()
 }
 
+// **********
 const name = {firseName: 'Abraham', lastName:'Linkon'}
 
 const personStringify = JSON.stringify(name);
 
 
 localStorage.setItem('name', personStringify);
+
+// **********
 
