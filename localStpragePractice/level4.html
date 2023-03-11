@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap Min .css Link Below >>> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>Level-4</title>
+  </head>
+  <body
+    class="d-flex flex-column justify-content-center align-items-center container py-5"
+  >
+    <h1 class="py-5">Contact Me</h1>
+
+    <section
+      class="d-flex flex-column gap-2 justify-content-center align-items-center"
+    >
+      <div>
+        <input
+          id="name-field"
+          type="text"
+          placeholder="name"
+          class="rounded-2"
+        />
+        <button
+          id="name-delete"
+          onclick="removeStorage('name')"
+          class="btn btn-outline-primary"
+        >
+          Delete
+        </button>
+        <button
+          id="name-send"
+          onclick="saveToLocalStorage('name')"
+          class="btn btn-outline-primary"
+        >
+          Send
+        </button>
+        <br />
+      </div>
+      <div>
+        <input
+          id="email-field"
+          type="email"
+          placeholder="email@"
+          class="rounded-2"
+        />
+        <button
+          id="email-delete"
+          onclick="removeStorage('email')"
+          class="btn btn-outline-primary"
+        >
+          Delete
+        </button>
+        <button
+          id="email-send"
+          onclick="saveToLocalStorage('email')"
+          class="btn btn-outline-primary"
+        >
+          Send
+        </button>
+        <br />
+      </div>
+      <div>
+        <textarea
+          id="message-field"
+          name="message"
+          cols="22"
+          rows="1"
+          placeholder="Type your Message"
+          class="rounded-2"
+        ></textarea>
+        <button
+          id="message-delete"
+          onclick="removeStorage('message')"
+          class="btn btn-outline-primary"
+        >
+          Delete
+        </button>
+        <button
+          id="message-send"
+          onclick="saveToLocalStorage('message')"
+          class="btn btn-outline-primary"
+        >
+          Send
+        </button>
+      </div>
+    </section>
+    <section class="py-5">
+      <button id="store-info" onclick="storeLocalStorageData()">
+        Store Info
+      </button>
+      <button id="reset-btn" onclick="cleareStorage()" class="btn btn-primary">
+        Reset
+      </button>
+    </section>
+
+    <!-- *My Scripts* -->
+    <script src="./level4.js"></script>
+
+    <!-- Bootstrap JS Link Below >>> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
