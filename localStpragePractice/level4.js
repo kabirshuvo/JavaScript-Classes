@@ -1,7 +1,9 @@
 const saveToLocalStorage = (inputType) => {
     const inputField = document.getElementById(`${inputType}-field`);
     localStorage.setItem(inputType, inputField.value);
+
     inputField.value = '';
+     
 }
 
 const removeStorage = (inputType) => {
@@ -13,10 +15,12 @@ const cleareStorage = () => {
 }
 
 const storeLocalStorageData = () => {
-    let storedData = {};
-    for (let key in localStorage) {
-      storedData[key] = localStorage.getItem(key);
-    }
-    const localStorageDataString = JSON.stringify(storedData);
-    localStorage.setItem('localStorageData', localStorageDataString);
+    const name = document.getElementById('name-field').value;
+    const email = document.getElementById('email-field').value;
+    const message = document.getElementById('message-field').value;
+    const storedData = { name, email, message };
+    const storedDataString = JSON.stringify(storedData);
+    localStorage.setItem('storedData', storedDataString);
   }
+
+  
