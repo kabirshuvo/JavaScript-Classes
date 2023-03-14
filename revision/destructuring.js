@@ -20,6 +20,21 @@ const boxify = alphabets.concat(numbers);
 //console.log(rest)
 
 
-console.log(newArray);
-console.log(boxify);
+//console.log(newArray);
+//console.log(boxify);
+// ***Using By Function***
+
+function sumAndMultiply(a, b) {
+    return [a+b, a*b, a/b]
+}
+
+//const array = sumAndMultiply(5, 5);
+//console.log(array);
+
+const [sum, multiply, division = 'No division'] = sumAndMultiply(3, 4);
+
+//console.log(sum);
+//console.log(multiply);
+console.log(division);
+
 
