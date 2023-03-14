@@ -16,3 +16,9 @@ console.log(name);
 const brand = products.map(product => product.brand);
 console.log(brand);
 
+const price = products.map(product => product.price);
+console.log(price);
+
+const color = products.map(product => product.color);
+console.log(color);
+
